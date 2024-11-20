@@ -1,0 +1,191 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Latar belakang hitam */
+    color: #fff; /* Warna teks putih */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Sembunyikan scrollbar */
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Pastikan konten utama di depan */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparansi latar belakang kartu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 430px;
+    margin: 20px;
+    color: #333; /* Warna teks kartu */
+}
+
+h1 {
+    color: #0720ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.wishes-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.wishes-list li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px; /* Ukuran tombol yang lebih besar */
+    font-size: 1em; /* Menambahkan ukuran font */
+    color: #fff;
+    background: linear-gradient(45deg, #0720ff, #00aaff); /* Gradient background */
+    border-radius: 30px; /* Radius lebih besar untuk sudut yang lebih halus */
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan pada tombol */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transisi pada hover */
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #00aaff, #0720ff); /* Gradient background berubah arah */
+    transform: scale(1.1); /* Efek skala lebih besar pada hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar pada hover */
+}
+
+/* Partikel dan bintang */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #010025;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Background images */
+.background-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden; /* Sembunyikan scrollbar jika ada */
+}
+
+.background-img {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    opacity: 0.7; /* Tambah opasitas untuk lebih jelas */
+    border-radius: 10px;
+    animation: float 10s infinite ease-in-out;
+}
+
+/* Menempatkan posisi gambar secara abstrak */
+.background-img:nth-child(1) { top: 5%; left: 5%; }
+.background-img:nth-child(2) { top: 8%; left: 18%; }
+.background-img:nth-child(3) { top: 12%; left: 32%; }
+.background-img:nth-child(4) { top: 20%; left: 45%; }
+.background-img:nth-child(5) { top: 15%; left: 60%; }
+.background-img:nth-child(6) { top: 22%; left: 75%; }
+.background-img:nth-child(7) { top: 30%; left: 10%; }
+.background-img:nth-child(8) { top: 35%; left: 25%; }
+.background-img:nth-child(9) { top: 40%; left: 40%; }
+.background-img:nth-child(10) { top: 45%; left: 55%; }
+.background-img:nth-child(11) { top: 52%; left: 70%; }
+.background-img:nth-child(12) { top: 58%; left: 85%; }
+.background-img:nth-child(13) { top: 65%; left: 20%; }
+.background-img:nth-child(14) { top: 70%; left: 35%; }
+.background-img:nth-child(15) { top: 75%; left: 50%; }
+.background-img:nth-child(16) { top: 80%; left: 65%; }
+.background-img:nth-child(17) { top: 85%; left: 80%; }
+.background-img:nth-child(18) { top: 90%; left: 10%; }
+.background-img:nth-child(19) { top: 95%; left: 25%; }
+.background-img:nth-child(20) { top: 16%; left: 40%; }
+.background-img:nth-child(21) { top: 65%; left: 55%; }
+.background-img:nth-child(22) { top: 10%; left: 70%; }
+.background-img:nth-child(23) { top: 15%; left: 85%; }
+.background-img:nth-child(24) { top: 20%; left: 5%; }
+.background-img:nth-child(25) { top: 25%; left: 20%; }
+.background-img:nth-child(26) { top: 30%; left: 35%; }
+.background-img:nth-child(27) { top: 35%; left: 50%; }
+.background-img:nth-child(28) { top: 40%; left: 65%; }
+.background-img:nth-child(29) { top: 45%; left: 80%; }
+.background-img:nth-child(30) { top: 50%; left: 10%; }
+
+/* Animasi mengambang */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Kurangi jarak mengambang */
+    100% { transform: translateY(0); }
+}
+
+.card {
+    position: relative; /* Buat posisi relatif untuk elemen anak */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparansi latar belakang kartu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 20px;
+    color: #333; /* Warna teks kartu */
+}
+
+.efek {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Supaya gambar tidak mengganggu interaksi */
+}
+
+.efek img {
+    position: absolute;
+    width: 50px; /* Ukuran gambar lebih kecil */
+    height: auto;
+    opacity: 0.8; /* Transparansi gambar */
+    animation: float 10s infinite ease-in-out; /* Efek mengambang */
+}
+
+/* Menempatkan gambar dekorasi di tepi kartu ucapan */
+.efek img:nth-child(1) { top: -10px; left: -10px; }
+.efek img:nth-child(2) { top: -10px; right: -10px; }
+.efek img:nth-child(3) { bottom: -10px; left: -10px; }
+.efek img:nth-child(4) { bottom: -10px; right: -10px; }
+.efek img:nth-child(5) { top: 50%; left: -10px; transform: translateY(-50%); }
+.efek img:nth-child(6) { top: 50%; right: -10px; transform: translateY(-50%); }
+.efek img:nth-child(7) { top: -10px; left: 50%; transform: translateX(-50%); }
+.efek img:nth-child(8) { bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+/* Animasi mengambang */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Kurangi jarak mengambang */
+    100% { transform: translateY(0); }
+}
+
